@@ -7,6 +7,7 @@ Feature: Service client POST
     * url url
 
   Scenario: check the service POST Method
+
     * def requestCreate = {"name": '#(name)', "job": '#(job)'}
     * def responsePost = read('classpath:karate/request/createClient/responsePost_schemas.json')
 
@@ -15,3 +16,4 @@ Feature: Service client POST
     When method post
     Then status 201
     And match response == responsePost
+
